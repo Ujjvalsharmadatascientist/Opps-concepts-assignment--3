@@ -1,0 +1,197 @@
+{
+ "cells": [
+  {
+   "cell_type": "raw",
+   "id": "ccb97161-9733-4f5d-a38f-109bf28ff3d1",
+   "metadata": {},
+   "source": [
+    "Q1. What is Abstraction in OOps? Explain with an example."
+   ]
+  },
+  {
+   "cell_type": "raw",
+   "id": "7411d3a6-910d-419f-a9ff-14e0bf93af89",
+   "metadata": {},
+   "source": [
+    "Abstraction is used to hide the internal functionality of the function from the users. The users only interact with the basic implementation of the function, but inner working is hidden. User is familiar with that \"what function does\" but they don't know \"how it does.\""
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "5555aca4-9bc5-468d-b6f5-87ba56b556ae",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "the mileage is 30kmph\n",
+      "the mileage is 25kmph\n",
+      "the mileage is 27kmph\n"
+     ]
+    }
+   ],
+   "source": [
+    "class car ():\n",
+    "    def mileage(self):\n",
+    "        pass\n",
+    "class tesla (car):\n",
+    "    def mileage(self):\n",
+    "        print(\"the mileage is 30kmph\")\n",
+    "class maruti(car):\n",
+    "    def mileage(self):\n",
+    "        print(\"the mileage is 25kmph\")\n",
+    "class duster (car):\n",
+    "    def mileage(self):\n",
+    "        print (\"the mileag is 24kmph\")\n",
+    "class renault(car):\n",
+    "    def mileage(self):\n",
+    "        print (\"the mileage is 27kmph\")\n",
+    "        \n",
+    "t=tesla()\n",
+    "t.mileage()\n",
+    "\n",
+    "m=maruti()\n",
+    "m.mileage()\n",
+    "\n",
+    "d=duster()\n",
+    "d.mileage\n",
+    "\n",
+    "r=renault()\n",
+    "r.mileage()\n"
+   ]
+  },
+  {
+   "cell_type": "raw",
+   "id": "b279277d-9731-4329-aeca-ccda16db54a2",
+   "metadata": {},
+   "source": [
+    "Q2. Differentiate between Abstraction and Encapsulation. Explain with an example."
+   ]
+  },
+  {
+   "cell_type": "raw",
+   "id": "47f12c95-c9ce-411a-ab75-aa8b52f437c5",
+   "metadata": {},
+   "source": [
+    "Abstraction is the process or method of gaining the information."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "676bfa23-7587-4684-aff7-c8a6c26a728c",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "IndentationError",
+     "evalue": "unindent does not match any outer indentation level (<tokenize>, line 6)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;36m  File \u001b[0;32m<tokenize>:6\u001b[0;36m\u001b[0m\n\u001b[0;31m    return\u001b[0m\n\u001b[0m    ^\u001b[0m\n\u001b[0;31mIndentationError\u001b[0m\u001b[0;31m:\u001b[0m unindent does not match any outer indentation level\n"
+     ]
+    }
+   ],
+   "source": [
+    "class democlass(ABC):\n",
+    "    @abstractmethod\n",
+    "    def method1(self):\n",
+    "        \n",
+    "         print (\"abstract method\")\n",
+    "        return\n",
+    "    def method2(self):\n",
+    "        print (\"concrete method\")\n",
+    "\n",
+    "class concreteclass(democlass):\n",
+    "    def method1(self):\n",
+    "        super().method1()\n",
+    "        return\n",
+    "      \n",
+    "obj = concreteclass()\n",
+    "obj.method1()\n",
+    "obj.method2()"
+   ]
+  },
+  {
+   "cell_type": "raw",
+   "id": "9e2f780c-c748-4b7d-918c-bb550bbdf3c9",
+   "metadata": {},
+   "source": [
+    "Q3. What is abc module in python? Why is it used?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "44ecc73b-5173-4420-b514-a65af6cbd5d5",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "IndentationError",
+     "evalue": "unexpected indent (1784595571.py, line 4)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;36m  Cell \u001b[0;32mIn[7], line 4\u001b[0;36m\u001b[0m\n\u001b[0;31m    class AbstractClass(metaclass=abc.ABCMeta):\u001b[0m\n\u001b[0m    ^\u001b[0m\n\u001b[0;31mIndentationError\u001b[0m\u001b[0;31m:\u001b[0m unexpected indent\n"
+     ]
+    }
+   ],
+   "source": [
+    "import abc \n",
+    "  \n",
+    "  \n",
+    "   class AbstractClass(metaclass=abc.ABCMeta): \n",
+    "    def abstractfunc(self): \n",
+    "        return None\n",
+    "  \n",
+    "  \n",
+    "print(AbstractClass.register(dict)) "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "d6fbc8a6-7a3b-4818-885d-2ff0972fc9ea",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "132b5a29-14d7-4394-bf0e-b5f2fc006153",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "3a9246e0-f5df-4d1c-9d24-ea8847598a2b",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.10.8"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
